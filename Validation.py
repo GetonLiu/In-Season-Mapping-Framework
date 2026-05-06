@@ -12,10 +12,10 @@ warnings.filterwarnings("ignore")
 # ============================================================================
 # Configuration & Paths
 # ============================================================================
-RESULT_ROOT = r"D:\Merged_Results"
-SHP_ROOT = r"D:\Merged_Results"
-SAVE_DIR1 = r"F:\Desktop\博\第一篇"
-SAVE_DIR = r"F:\Desktop\博\第一篇\Validation_Final_TransformerDSarea"
+RESULT_ROOT = r"D:\Inseason_mapping"
+SHP_ROOT = r"D:\Inseason_mapping"
+SAVE_DIR = r"F:\Inseason_mapping"
+
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 # Subdirectory for confusion matrices to keep the root directory clean
@@ -159,7 +159,7 @@ def prepare_step_metrics_effective(full_gdf, full_preds, step, current_weights):
 # Main Execution Pipeline
 # ============================================================================
 def main():
-    weight_csv_path = os.path.join(SAVE_DIR1, "Area_Proportions_2023_2024.csv")
+    weight_csv_path = os.path.join(SAVE_DIR, "Area_Proportions_2023_2024.csv")
     global_weights = load_area_weights(weight_csv_path) or {}
 
     metrics_records = []
