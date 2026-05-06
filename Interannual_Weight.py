@@ -68,7 +68,7 @@ def calculate_complexity_weight(y1, y2, y3, y4):
 
 # ================= PROCESSING FLOW =================
 def generate_weight_map(target_year):
-    print(f"\n[Process] Generating spatial weight map for: {target_year}")
+    print(f"\n[Process] Generating interannual weight map for: {target_year}")
 
     years = [target_year - 4, target_year - 3, target_year - 2, target_year - 1]
     files = [os.path.join(DATA_ROOT, RF_FILE_TEMPLATE.format(year=y)) for y in years]
@@ -90,7 +90,7 @@ def generate_weight_map(target_year):
         'compress': 'lzw'
     })
 
-    out_name = f"Spatial_Weight_{target_year}.tif"
+    out_name = f"Interannual_Weight_{target_year}.tif"
     out_path = os.path.join(OUTPUT_DIR, out_name)
 
     block_width, block_height = 2048, 2048
