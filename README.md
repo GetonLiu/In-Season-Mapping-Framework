@@ -62,4 +62,4 @@ The workflow is divided into prior generation, data preprocessing, model trainin
 
 *You can install the main dependencies via pip:*
 ```bash
-pip install torch numpy pandas geopandas shapely rasterio scikit-learn tqdm
+pip install torch numpy pandas geopandas shapely rasterio scikit-learn tqdm 
