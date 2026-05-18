@@ -1,7 +1,7 @@
 # In-Season Dynamic Crop Mapping Framework
 
 ## 📌 Introduction
-This repository implements a spatiotemporal adaptive classification framework that couples **High-Order Markov Priors** with a **Densely Supervised (DS) Transformer**. It is specifically designed for the accurate, in-season dynamic crop mapping of cropping systems, particularly in regions lacking historical crop map products. 
+This repository implements a spatiotemporal adaptive classification framework that couples **High-Order Markov Prior** with a **densely supervised (DS) Transformer**. It is specifically designed for the accurate, in-season dynamic crop mapping of cropping systems, particularly in regions lacking historical crop map products. 
 
 By integrating time-series spectral features with transition probabilities derived from historical rotation patterns, this framework dynamically updates crop classifications throughout the growing season, effectively mitigating early-season uncertainties.
 
@@ -30,7 +30,7 @@ The workflow is divided into prior generation, data preprocessing, model trainin
 * **`DSTransformer_Tuning.py`**
   A hyperparameter tuning script for the DS-Transformer. Performs grid search across hidden dimensions, learning rates, and dropout rates to find optimal architecture configurations.
 * **`DSTransformer_Train.py`**
-  The main training script for the Densely Supervised (DS) Transformer. It features Focal Loss, time-decay weights for early-stage supervision, and dynamic step-by-step evaluation to monitor in-season classification accuracy.
+  The main training script for the DS-Transformer. It features Focal Loss, time-decay weights for early-stage supervision, and dynamic step-by-step evaluation to monitor in-season classification accuracy.
 * **`In_Season_Dynamic_Crop_Mapping.py`**
   The core mapping engine. It performs large-scale inference by coupling the trained DS-Transformer outputs with the high-order Markov priors. It uses a linear fusion strategy and a `CropStateTracker` to dynamically update crop distributions.
 * **`Validation.py`**
